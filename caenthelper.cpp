@@ -544,7 +544,7 @@ Graph inducedRp(Graph & G)
     }
    */ 
     
-    cout << "Our final Seen consists of:";
+//cout << "Our final Seen consists of:";
     
     for(si=seen.begin(); si != seen.end(); si++)
     {
@@ -554,14 +554,14 @@ Graph inducedRp(Graph & G)
         string vname;
         VVec curr=*si;
         
-        printVVec(curr);
+   //     printVVec(curr);
         vname = ssVVec(curr);
         put(gamma_vname,v,vname);
         
         //We need to create a VMap so we can add edges later
         vmap.insert(VertexMap::value_type(vname,v));
     }
-    cout << endl;
+ //   cout << endl;
     
     for(si=seen.begin(); si != seen.end(); si++)
     {

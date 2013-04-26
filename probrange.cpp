@@ -12,30 +12,22 @@ int main(void)
     vector<string> s;
     int i,j,k=2;
     ofstream outfile("CAENToutput5.txt");
-    double ceval,deval,seval,total=0,runs=10,stdev,p;
+    double ceval,deval,seval,total=0,runs=1000,stdev,p;
     bool equalZerosAndOnes = 0;
     clock_t start,end;
     vector<double> evals(runs);
 
     outfile << setprecision(15);
     cout << setprecision(15);
-/**
-	add_edge(0,0,string("00"),G);
-	add_edge(0,1,string("01"),G);
-	add_edge(1,0,string("10"),G);
-	add_edge(1,1,string("11"),G);
 
-	put(gvname,0,string("0"));
-	put(gvname,1,string("1"));
-**/
     add_edge(0,0,string("0"),G);
     add_edge(0,0,string("1"),G);
 
 //    PrintFullGraphInfo(G);
 
-    k=6;
+    k=2;
     p=0.5;
-    while(k<7)
+    while(k<8)
     {
         Graph H = HigherNBlock(G,k);
 
